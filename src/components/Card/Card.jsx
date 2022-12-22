@@ -1,12 +1,16 @@
+import css from './Card.module.css';
+
 import { Logo } from 'components/Logo/Logo';
 import { User } from 'components/User/User';
-import { Button } from 'components/Button/Button';
-export const Card = ({onBtnClick, isClicked, followers }) => { 
-    return (
-        <div>
-            <Logo />
-            <User followers={followers } />
-            <Button onBtnClick={onBtnClick} isClicked={isClicked } />
-        </div>
-    )
-}
+
+export const Card = ({ onBtnClick, isClicked}) => {
+  return (
+      <div className={css.Card }>
+      <Logo />
+      <User        
+        isClicked={isClicked}
+        onBtnClick={onBtnClick}
+      />
+    </div>
+  );
+};

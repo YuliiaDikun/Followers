@@ -23,3 +23,8 @@ code {
     url('./fonts/Montserrat-SemiBold.ttf') format('truetype');
   font-weight: bold;
 }
+img {
+  display: block;
+  width: 100%;
+  min-height: auto;
+}
