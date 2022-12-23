@@ -1,6 +1,7 @@
 import css from './User.module.css';
 import userpic from '../../img/Hansel.svg';
 export const User = ({ isClicked, onBtnClick }) => {
+   
   const followers = isClicked ? 100501 : 100500;
   const correctFollowers =
     String(followers).slice(0, 3) + ',' + String(followers).slice(3);
@@ -13,7 +14,7 @@ export const User = ({ isClicked, onBtnClick }) => {
       <p className={css.Media}>777 tweets</p>
       <p  className={css.Media}>{correctFollowers} followers</p>
       <button
-      className={css.Button}
+      className={isClicked ? css.Active : css.Button}
         type="button"
         aria-label="following button"
         onClick={() => onBtnClick()}
