@@ -28,3 +28,9 @@ img {
   width: 100%;
   min-height: auto;
 }
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
