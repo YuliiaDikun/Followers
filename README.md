@@ -20,3 +20,5 @@ Using this app you can:
 
 ---
  ## Have fun!
+
+ [Go to app](https://yuliiadikun.github.io/Followers/)
