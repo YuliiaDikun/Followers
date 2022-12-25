@@ -36,6 +36,9 @@ export class App extends Component {
   };
   render() {
     const { users } = this.state;
-    return <UserList users={users} onToggleProp={this.onToggleProp} />;
+    return <>
+    <h1 className='visually-hidden'>Followers app</h1>
+    <section><UserList users={users} onToggleProp={this.onToggleProp} /></section>    
+    </>
   }
 }
