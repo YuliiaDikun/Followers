@@ -28,9 +28,13 @@ img {
   width: 100%;
   min-height: auto;
 }
+ul{
+    list-style: none;
+    padding: 0;
+}
 #root{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    
 }

@@ -1,32 +1,41 @@
 import { Component } from 'react';
 
-import { Card } from './Card/Card';
+import dataUsers from '../services/users';
+
+import { UserList } from './UserList/UserList';
 
 export class App extends Component {
   state = {
-    isBtnClick: false,
+    users: dataUsers,
   };
 
   componentDidMount() {
     const followers = localStorage.getItem('follow');
     const parsedFollowers = JSON.parse(followers);
     if (parsedFollowers) {
-      this.setState({ isBtnClick: parsedFollowers });
+      this.setState({ users: parsedFollowers });
+    } 
+  }
+  componentDidUpdate(_, prevState) {
+    if (prevState.users !== this.setState.users) {
+      localStorage.setItem("follow", JSON.stringify(this.state.users));
     }
   }
-  componentDidUpdate(_, prevState) {    
-    if (prevState.isBtnClick !== this.setState.isBtnClick) {      
-      localStorage.setItem('follow', JSON.stringify(this.state.isBtnClick));
-    }
-  }
-
-  onBtnClick = () => {
-    this.setState(prevState => {
-      return { isBtnClick: !prevState.isBtnClick};
-    });
+  onToggleProp = (id, prop) => {
+    this.setState(({ users }) => ({
+      users: users.map((user) => {
+        if (user.id === id) {
+          return {
+            ...user,
+            [prop]: !user[prop],
+          };
+        }
+        return user;
+      }),
+    }));
   };
   render() {
-    const { isBtnClick } = this.state;
-    return <Card onBtnClick={this.onBtnClick} isClicked={isBtnClick} />;
+    const { users } = this.state;
+    return <UserList users={users} onToggleProp={this.onToggleProp} />;
   }
 }
