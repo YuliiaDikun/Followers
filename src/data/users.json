@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "user": "Taras Shevchenko",
+        "tweets": 777,
+        "followers": 100500,
+        "avatar": "https://st.depositphotos.com/19205502/54427/v/380/depositphotos_544279558-stock-illustration-taras-shevchenko-ukrainian-writer-poet.jpg"
+        
+    },
+    {
+        "id": 2,
+        "user": "Ivan Franko",
+        "tweets": 777,
+        "followers": 100500,
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ivan_Franko.svg/2500px-Ivan_Franko.svg.png"
+        
+    },
+    {
+        "id": 3,
+        "user": "Lesya Ukrainka",
+        "tweets": 777,
+        "followers": 100500,
+        "avatar": "https://thumb.tildacdn.com/tild6163-3631-4162-b263-623037353836/-/resize/540x/-/format/webp/Asset_13x.png"
+        
+    },
+    {
+        "id": 4,
+        "user": "Hryhorii Skovoroda",
+        "tweets": 777,
+        "followers": 100500,
+        "avatar": "http://i1.wp.com/www.flylog.com.ua/wp-content/uploads/2017/01/2014-0493.jpg"          
+    }
+]

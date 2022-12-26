@@ -1,12 +1,12 @@
 import { Component } from 'react';
 
-import dataUsers from '../services/users';
-
+import dataUsers from '../data/users';
+import { updateData } from 'services/updateData';
 import { UserList } from './UserList/UserList';
 
 export class App extends Component {
   state = {
-    users: dataUsers,
+    users: updateData(dataUsers),
   };
 
   componentDidMount() {
